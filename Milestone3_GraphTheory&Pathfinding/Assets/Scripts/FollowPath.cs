@@ -19,18 +19,25 @@ public class FollowPath : MonoBehaviour
 
     public Graph graph;
 
+    public bool isCurrentSelectedTank;
+    public bool isArrived;
     void Start()
     {
         wps = wpManager.GetComponent<WaypointManager>().waypoints;
         graph = wpManager.GetComponent<WaypointManager>().graph;
 
         currentNode = wps[0];
+        isCurrentSelectedTank = false;
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
 
+        if (!isCurrentSelectedTank)
+        {
+            return;
+        }
         if (graph.getPathLength() == 0 ||currentWaypointIndex == graph.getPathLength())
         {
             return;
@@ -55,95 +62,14 @@ public class FollowPath : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), Time.deltaTime * rotSpeed);
 
             transform.Translate(0, 0, speed * Time.deltaTime);
+            isArrived = false;
             }
+            else if (currentWaypointIndex >= graph.getPathLength())
+        {
+            isArrived = true;
+        }
+
 
     }
 
-
-    //public void GoToHelipad()
-    //{
-
-    //    graph.AStar(currentNode, wps[20]);
-    //    currentWaypointIndex = 0;
-
-
-    //}
-    //public void GoToRuins()
-    //{
-    //    graph.AStar(currentNode, wps[7]);
-    //    currentWaypointIndex = 0;
-
-
-    //}
-    //public void GoToFactory()
-    //{ 
-    //    graph.AStar(currentNode, wps[17]);
-    //    currentWaypointIndex = 0;
-
-
-
-    //}
-    //public void GoToTwinMountains()
-    //{
-    //    graph.AStar(currentNode, wps[3]);
-    //    currentWaypointIndex = 0;
-
-
-
-    //}
-    //public void GotoBarracks()
-    //{
-    //    graph.AStar(currentNode, wps[12]);
-    //    currentWaypointIndex = 0;
-
-
-
-    //}
-    //public void GoToCommandCenter()
-    //{
-    //    graph.AStar(currentNode, wps[5]);
-    //    currentWaypointIndex = 0;
-
-
-
-    //}
-    //public void GoToOilRefinery()
-    //{
-    //    graph.AStar(currentNode, wps[14]);
-    //    currentWaypointIndex = 0;
-
-
-
-    //}
-    //public void GoToTankers()
-    //{
-    //    graph.AStar(currentNode, wps[16]);
-    //    currentWaypointIndex = 0;
-
-
-
-    //}
-    //public void GoToRadar()
-    //{
-    //    graph.AStar(currentNode, wps[8]);
-    //    currentWaypointIndex = 0;
-
-
-    //}
-    //public void GoToCommandPost()
-    //{
-    //    graph.AStar(currentNode, wps[6]);
-    //    currentWaypointIndex = 0;
-
-
-
-    //}
-    //public void GoToMiddle()
-    //{
-    //    graph.AStar(currentNode, wps[13]);
-    //    currentWaypointIndex = 0;
-
-
-
-    //}
 }

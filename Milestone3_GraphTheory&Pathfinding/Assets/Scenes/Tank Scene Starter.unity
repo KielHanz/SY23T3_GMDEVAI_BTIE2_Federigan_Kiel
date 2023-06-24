@@ -151,7 +151,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4525977414444266, guid: 1b8c2532d9d87a1498c0cb5d84a797f5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.798853
+      value: -13.84
       objectReference: {fileID: 0}
     - target: {fileID: 4525977414444266, guid: 1b8c2532d9d87a1498c0cb5d84a797f5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -159,7 +159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4525977414444266, guid: 1b8c2532d9d87a1498c0cb5d84a797f5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 33.12964
+      value: 35.83
       objectReference: {fileID: 0}
     - target: {fileID: 4525977414444266, guid: 1b8c2532d9d87a1498c0cb5d84a797f5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1063,8 +1063,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2035920349}
-        m_TargetAssemblyTypeName: FollowPath, Assembly-CSharp
+      - m_Target: {fileID: 167568907}
+        m_TargetAssemblyTypeName: TankChooser, Assembly-CSharp
         m_MethodName: GoToCommandPost
         m_Mode: 1
         m_Arguments:
@@ -1254,8 +1254,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2035920349}
-        m_TargetAssemblyTypeName: FollowPath, Assembly-CSharp
+      - m_Target: {fileID: 167568907}
+        m_TargetAssemblyTypeName: TankChooser, Assembly-CSharp
         m_MethodName: GotoBarracks
         m_Mode: 1
         m_Arguments:
@@ -1465,7 +1465,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4525977414444266, guid: 1b8c2532d9d87a1498c0cb5d84a797f5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 25.699638
+      value: 22.32
       objectReference: {fileID: 0}
     - target: {fileID: 4525977414444266, guid: 1b8c2532d9d87a1498c0cb5d84a797f5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1526,6 +1526,56 @@ MonoBehaviour:
   wps: []
   currentNode: {fileID: 0}
   currentWaypointIndex: 0
+  isCurrentSelectedTank: 0
+  isArrived: 0
+--- !u!54 &478005449
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478005446}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &478005450
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478005446}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.7197056, y: 1.7437844, z: 2.3529835}
+  m_Center: {x: 0.13041401, y: 0.9269445, z: -0.057152748}
 --- !u!1 &502085351 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1061959093916892, guid: 1b8c2532d9d87a1498c0cb5d84a797f5, type: 3}
@@ -2087,7 +2137,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 37.2, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &594014309
@@ -2108,7 +2158,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4525977414444266, guid: 1b8c2532d9d87a1498c0cb5d84a797f5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.02
+      value: -4.3
       objectReference: {fileID: 0}
     - target: {fileID: 4525977414444266, guid: 1b8c2532d9d87a1498c0cb5d84a797f5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2116,7 +2166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4525977414444266, guid: 1b8c2532d9d87a1498c0cb5d84a797f5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 23.83
+      value: 24.6
       objectReference: {fileID: 0}
     - target: {fileID: 4525977414444266, guid: 1b8c2532d9d87a1498c0cb5d84a797f5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2539,6 +2589,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100112, guid: 002e2a607f5b64c48be0b3b0d8b8bfdd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2035920349}
+    - targetCorrespondingSourceObject: {fileID: 100112, guid: 002e2a607f5b64c48be0b3b0d8b8bfdd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2035920352}
+    - targetCorrespondingSourceObject: {fileID: 100112, guid: 002e2a607f5b64c48be0b3b0d8b8bfdd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2035920351}
   m_SourcePrefab: {fileID: 100100000, guid: 002e2a607f5b64c48be0b3b0d8b8bfdd, type: 3}
 --- !u!1 &752004688 stripped
 GameObject:
@@ -2634,8 +2690,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2035920349}
-        m_TargetAssemblyTypeName: FollowPath, Assembly-CSharp
+      - m_Target: {fileID: 167568907}
+        m_TargetAssemblyTypeName: TankChooser, Assembly-CSharp
         m_MethodName: GoToRadar
         m_Mode: 1
         m_Arguments:
@@ -2768,8 +2824,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2035920349}
-        m_TargetAssemblyTypeName: FollowPath, Assembly-CSharp
+      - m_Target: {fileID: 167568907}
+        m_TargetAssemblyTypeName: TankChooser, Assembly-CSharp
         m_MethodName: GoToFactory
         m_Mode: 1
         m_Arguments:
@@ -3114,8 +3170,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2035920349}
-        m_TargetAssemblyTypeName: FollowPath, Assembly-CSharp
+      - m_Target: {fileID: 167568907}
+        m_TargetAssemblyTypeName: TankChooser, Assembly-CSharp
         m_MethodName: GoToTwinMountains
         m_Mode: 1
         m_Arguments:
@@ -3516,6 +3572,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100112, guid: 002e2a607f5b64c48be0b3b0d8b8bfdd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 478005447}
+    - targetCorrespondingSourceObject: {fileID: 100112, guid: 002e2a607f5b64c48be0b3b0d8b8bfdd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 478005450}
+    - targetCorrespondingSourceObject: {fileID: 100112, guid: 002e2a607f5b64c48be0b3b0d8b8bfdd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 478005449}
   m_SourcePrefab: {fileID: 100100000, guid: 002e2a607f5b64c48be0b3b0d8b8bfdd, type: 3}
 --- !u!1 &1115368944
 GameObject:
@@ -4188,6 +4250,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100112, guid: 002e2a607f5b64c48be0b3b0d8b8bfdd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1636282817}
+    - targetCorrespondingSourceObject: {fileID: 100112, guid: 002e2a607f5b64c48be0b3b0d8b8bfdd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1636282820}
+    - targetCorrespondingSourceObject: {fileID: 100112, guid: 002e2a607f5b64c48be0b3b0d8b8bfdd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1636282819}
   m_SourcePrefab: {fileID: 100100000, guid: 002e2a607f5b64c48be0b3b0d8b8bfdd, type: 3}
 --- !u!1 &1285931725
 GameObject:
@@ -4408,8 +4476,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2035920349}
-        m_TargetAssemblyTypeName: FollowPath, Assembly-CSharp
+      - m_Target: {fileID: 167568907}
+        m_TargetAssemblyTypeName: TankChooser, Assembly-CSharp
         m_MethodName: GoToMiddle
         m_Mode: 1
         m_Arguments:
@@ -4606,7 +4674,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4525977414444266, guid: 1b8c2532d9d87a1498c0cb5d84a797f5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.2897453
+      value: 5.1
       objectReference: {fileID: 0}
     - target: {fileID: 4525977414444266, guid: 1b8c2532d9d87a1498c0cb5d84a797f5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5107,6 +5175,56 @@ MonoBehaviour:
   wps: []
   currentNode: {fileID: 0}
   currentWaypointIndex: 0
+  isCurrentSelectedTank: 0
+  isArrived: 0
+--- !u!54 &1636282819
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636282812}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &1636282820
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636282812}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.6696053, y: 1.851454, z: 2.256607}
+  m_Center: {x: 0.01843834, y: 0.8784188, z: -0.025489807}
 --- !u!1001 &1648531376
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5190,7 +5308,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4525977414444266, guid: 1b8c2532d9d87a1498c0cb5d84a797f5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.056852
+      value: 11.21
       objectReference: {fileID: 0}
     - target: {fileID: 4525977414444266, guid: 1b8c2532d9d87a1498c0cb5d84a797f5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5198,7 +5316,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4525977414444266, guid: 1b8c2532d9d87a1498c0cb5d84a797f5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18.45883
+      value: 22.3
       objectReference: {fileID: 0}
     - target: {fileID: 4525977414444266, guid: 1b8c2532d9d87a1498c0cb5d84a797f5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5521,8 +5639,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2035920349}
-        m_TargetAssemblyTypeName: FollowPath, Assembly-CSharp
+      - m_Target: {fileID: 167568907}
+        m_TargetAssemblyTypeName: TankChooser, Assembly-CSharp
         m_MethodName: GoToCommandCenter
         m_Mode: 1
         m_Arguments:
@@ -5720,8 +5838,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2035920349}
-        m_TargetAssemblyTypeName: FollowPath, Assembly-CSharp
+      - m_Target: {fileID: 167568907}
+        m_TargetAssemblyTypeName: TankChooser, Assembly-CSharp
         m_MethodName: GoToOilRefinery
         m_Mode: 1
         m_Arguments:
@@ -5854,8 +5972,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2035920349}
-        m_TargetAssemblyTypeName: FollowPath, Assembly-CSharp
+      - m_Target: {fileID: 167568907}
+        m_TargetAssemblyTypeName: TankChooser, Assembly-CSharp
         m_MethodName: GoToTankers
         m_Mode: 1
         m_Arguments:
@@ -6256,9 +6374,6 @@ MonoBehaviour:
     node2: {fileID: 112225174}
     dir: 1
   - node1: {fileID: 112225174}
-    node2: {fileID: 1553574492}
-    dir: 1
-  - node1: {fileID: 112225174}
     node2: {fileID: 253564903}
     dir: 1
   - node1: {fileID: 112225174}
@@ -6532,6 +6647,56 @@ MonoBehaviour:
   wps: []
   currentNode: {fileID: 0}
   currentWaypointIndex: 0
+  isCurrentSelectedTank: 0
+  isArrived: 0
+--- !u!65 &2035920351
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035920347}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.6278, y: 1.7942631, z: 2.5650597}
+  m_Center: {x: 0.055042267, y: 0.94988525, z: -0.09792137}
+--- !u!54 &2035920352
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035920347}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2050755393 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1061959093916892, guid: 1b8c2532d9d87a1498c0cb5d84a797f5, type: 3}
